@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webiro - Transform Your Digital Presence</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cursor Effects -->
+    <div class="custom-cursor"></div>
+    
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <div class="logo" data-text="WEBiRO">WEBiRO</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="gradient-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-aos="fade-up">Elevate Your Digital Presence</h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Crafting bespoke web experiences for businesses that matter</p>
+            <button class="cta-button" data-aos="zoom-in" data-aos-delay="400">Start Your Journey</button>
+        </div>
+        <canvas id="particle-canvas"></canvas>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-header">
+            <h2 data-aos="fade-right">Our Expertise</h2>
+            <p data-aos="fade-right" data-aos-delay="200">Tailored solutions for every business need</p>
+        </div>
+        <div class="services-grid">
+            <!-- Service cards will be dynamically loaded from JS -->
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="section-header">
+            <h2 data-aos="fade-up">Our Work Speaks</h2>
+            <p data-aos="fade-up" data-aos-delay="200">Digital transformations that drive results</p>
+        </div>
+        <div class="portfolio-masonry">
+            <!-- Portfolio items loaded via JS -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="contact-info" data-aos="fade-right">
+                <h2>Let's Create Magic</h2>
+                <p>We're ready to elevate your digital presence. Reach out!</p>
+                <div class="info-items">
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+1 (555) WEB-IRO</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>hello@webiro.digital</p>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form" data-aos="fade-left">
+                <div class="form-group">
+                    <input type="text" id="name" required>
+                    <label for="name">Your Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" required>
+                    <label for="email">Your Email</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" required></textarea>
+                    <label for="message">Your Vision</label>
+                </div>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/scrollAnimations.js"></script>
+</body>
+</html>
