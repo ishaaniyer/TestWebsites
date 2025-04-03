@@ -43,7 +43,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Close mobile menu on click
 document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        document.querySelector(targetId).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+        
+        // Close mobile menu if open
         document.querySelector('.nav-links').classList.remove('active');
         document.querySelector('.menu-toggle').classList.remove('active');
     });
