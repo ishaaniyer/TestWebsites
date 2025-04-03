@@ -1,0 +1,26 @@
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.service-card {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-content {
+    animation: fadeIn 1s ease-out;
+}
+
+.service-card:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+.service-card:nth-child(even) {
+    animation-delay: 0.4s;
+}
