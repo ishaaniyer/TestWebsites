@@ -29,7 +29,66 @@ const servicesData = [
     { icon: '📈', title: 'SEO & Analytics', 
      desc: 'Data-driven strategies for growth' }
 ];
+// Add smooth scroll functionality
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+});
 
+// Close mobile menu on click
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('active');
+        document.querySelector('.menu-toggle').classList.remove('active');
+    });
+});
+
+// Add portfolio items dynamically
+const portfolioItems = [
+    { category: 'Restaurant', title: 'Bistro Moderno' },
+    { category: 'Startup', title: 'Tech Innovators' },
+    { category: 'Retail', title: 'Urban Fashion' },
+    { category: 'Service', title: 'Health & Wellness' }
+];
+
+const portfolioGrid = document.querySelector('.portfolio-grid');
+portfolioItems.forEach(item => {
+    const portfolioItem = document.createElement('div');
+    portfolioItem.className = 'portfolio-item';
+    portfolioItem.innerHTML = `
+        <div class="portfolio-image">
+            <img src="assets/placeholder.jpg" alt="${item.title}">
+        </div>
+        <div class="portfolio-info">
+            <h3>${item.title}</h3>
+            <p>${item.category}</p>
+        </div>
+    `;
+    portfolioGrid.appendChild(portfolioItem);
+});
+
+// Form validation
+document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    if (!name || !email || !message) {
+        alert('Please fill in all fields');
+        return;
+    }
+
+    // Add your form submission logic here
+    alert('Message sent successfully!');
+    this.reset();
+});
 // Generate service cards
 const servicesGrid = document.querySelector('.services-grid');
 servicesData.forEach(service => {
